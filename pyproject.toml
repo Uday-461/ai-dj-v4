@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aidj-v3"
+version = "0.1.0"
+description = "AI DJ v3 - Stem-based transition learning"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "librosa>=0.10",
+    "soundfile>=0.12",
+    "torch>=2.0",
+    "torchaudio>=2.0",
+    "demucs>=4.0",
+    "cvxpy>=1.3",
+    "scipy>=1.10",
+    "yt-dlp>=2023.1",
+    "pytsmod>=0.3",
+    "pyloudnorm>=0.1",
+    "huggingface_hub>=0.20",
+    "apify-client>=1.0",
+]
+
+[project.optional-dependencies]
+train = ["tensorboard>=2.14", "matplotlib>=3.7"]
+dev = ["pytest>=7.0", "ruff>=0.1"]
+
+[tool.setuptools.packages.find]
+include = ["aidj*"]

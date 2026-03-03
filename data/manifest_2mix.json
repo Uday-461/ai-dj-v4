@@ -1,0 +1,496 @@
+{
+  "num_mixes": 2,
+  "mixes": [
+    {
+      "id": "mix1055",
+      "title": "2013-07-17 - Ulterior Motive - Metalheadz, Rinse FM",
+      "url": "https://www.mixesdb.com/w/2013-07-17_-_Ulterior_Motive_-_Metalheadz,_Rinse_FM",
+      "audio_source": "soundcloud",
+      "audio_url": "https://soundcloud.com/metalheadz/ulterior-motive-and-sp-mc-the",
+      "num_identified_tracks": 48,
+      "num_total_tracks": 49,
+      "num_available_transitions": 46,
+      "num_timestamps": 48,
+      "tracklist": [
+        {
+          "id": "4oVZezpjNr0",
+          "title": "[0:00:00] Reza - Unknown Feelings [Metalheadz]"
+        },
+        {
+          "id": "tdqdHgf2hM0",
+          "title": "[0:03:08] Enei Feat. Sam Wills - Circles [Critical]"
+        },
+        {
+          "id": "-l6ACAUYJMg",
+          "title": "[0:04:35] Ed:it & Pennygiles - Set Theory [CIA]"
+        },
+        {
+          "id": "kTG4dUreMkI",
+          "title": "[0:06:45] DJ Hazard - Time Tripping [Playaz]"
+        },
+        {
+          "id": "sTKIFzRyQqw",
+          "title": "[0:08:12] State Of Mind & Nymfo - Get Humpty [SOM]"
+        },
+        {
+          "id": "6JH1r_j1-JU",
+          "title": "[0:10:21] The Upbeats - Retrograde [Vision]"
+        },
+        {
+          "id": "GQbBKdV8lP0",
+          "title": "[0:12:11] Rido - Faith [Metalheadz]"
+        },
+        {
+          "id": "q7Lk83NLmvk",
+          "title": "[0:13:38] Enei - The Bonebreaker [Critical]"
+        },
+        {
+          "id": "xBnQg_QLFLI",
+          "title": "[0:14:43] Ulterior Motive - Fragola Invisible [SUNANDBASS]"
+        },
+        {
+          "id": "1-3EI7fCLyM",
+          "title": "[0:17:15] Ray Keith - Chasing Shadows [Dread]"
+        },
+        {
+          "id": "rIwcTOPAXzU",
+          "title": "[0:19:48] Foreign Concept Feat. T Man - Tag Team [Critical]"
+        },
+        {
+          "id": "ssiq4-ZLmdA",
+          "title": "[0:21:15] Ulterior Motive Feat. Peta Oneir - Forgiven [Metalheadz]"
+        },
+        {
+          "id": "gEankW2pfjY",
+          "title": "[0:23:36] The Upbeats & Dose - Tangerine [Vision]"
+        },
+        {
+          "id": "t8WKXJZU_EY",
+          "title": "[0:25:35] Break - Steam Train [Symmetry]"
+        },
+        {
+          "id": "2zZt5OwmuJU",
+          "title": "[0:28:29] dBridge & Skeptical - Move Way [R&S]"
+        },
+        {
+          "id": "oH2byxPMB28",
+          "title": "[0:32:28] Digital - Deadline [31]"
+        },
+        {
+          "id": "07V2qnnoPl4",
+          "title": "[0:34:06] Alix Perez Feat. Strange U - Shadows [Shogun Audio]"
+        },
+        {
+          "id": "uBMHYYVOpk8",
+          "title": "[0:35:44] Om Unit - Grey Skies Over Chicago [Metalheadz]"
+        },
+        {
+          "id": "5cJLfzTSsTc",
+          "title": "[0:37:11] Machinedrum - Eyesdontlie [Ninja Tune]"
+        },
+        {
+          "id": "dVHPDAUCL0U",
+          "title": "[0:41:10] Studio Pressure - Relics [Certificate 18]"
+        },
+        {
+          "id": "ThRu5TX93Ck",
+          "title": "[0:43:45] DJ Solo - Darkage [Production House]"
+        },
+        {
+          "id": "sNxrhMShaJY",
+          "title": "[0:45:37] Hyper-On Experience - Lords Of The Null-Lines (Foul Play Remix) [Moving Shadow]"
+        },
+        {
+          "id": "v-VoWoBZHRg",
+          "title": "[0:47:14] Dawn Day Night - The Re-Animation Of Scottie [Astrophonica]"
+        },
+        {
+          "id": "da1uH_KvXnc",
+          "title": "[0:50:27] Ruffhouse & Clarity - Persecute [Modulations]"
+        },
+        {
+          "id": "LutQ8vKrNjY",
+          "title": "[0:52:16] Alix Perez Feat. Metropolis - Blueprint [Shogun Audio]"
+        },
+        {
+          "id": "IhuUrsA2Bo4",
+          "title": "[0:53:43] Stealth - Wrong Un [Subtitles]"
+        },
+        {
+          "id": "R9wHtQcA6-U",
+          "title": "[0:55:32] Icicle - Timer [Shogun Audio]"
+        },
+        {
+          "id": "NAvz_dt-w6w",
+          "title": "[0:56:37] Calibre Feat. Chimpo - Start Again (VIP) [Signature]"
+        },
+        {
+          "id": null,
+          "title": "[0:59:27] Total Science - Lightweight (Zero T Remix) [CIA]"
+        },
+        {
+          "id": "K_ID4VbBTJ0",
+          "title": "[1:01:15] Skeptical & Chimpo - Bad Acid"
+        },
+        {
+          "id": "77UR3LabhYE",
+          "title": "[1:04:09] Rockwell - Detroit [Shogun Audio]"
+        },
+        {
+          "id": "Em2pEARSNHA",
+          "title": "[1:05:58] Gridlok & Prolix - Membrane [Ram]"
+        },
+        {
+          "id": "28X6up9zlug",
+          "title": "[1:07:46] Mefjus & M-Force Feat. Maksim - Struggle & Pain [Breed 12 Inches]"
+        },
+        {
+          "id": "nJIzu6u6B8Y",
+          "title": "[1:08:49] Total Science & S.P.Y - Legion [Metalheadz]"
+        },
+        {
+          "id": "T4kC2v1NpaU",
+          "title": "[1:12:07] System & Phil Source - Fearless [Vampire]"
+        },
+        {
+          "id": "WibgGeAL0hI",
+          "title": "[1:15:45] Foreign Concept & Stray - Bang It [Critical]"
+        },
+        {
+          "id": "K43k_Wx7uo0",
+          "title": "[1:19:19] Brain Crisis - Fight Ogres [Subtitles]"
+        },
+        {
+          "id": "v-643lV_KLs",
+          "title": "[1:21:00] Dom & Roland - Odd Job (Ulterior Motive Remix) [Dom & Roland]"
+        },
+        {
+          "id": "qLoTGZQ73mk",
+          "title": "[1:23:10] Nasty Habits - 4 Da Cause [Reinforced]"
+        },
+        {
+          "id": "wzHFZlPSa8k",
+          "title": "[1:25:42] FD - Change Please [Spearhead]"
+        },
+        {
+          "id": "6dfHPvH5V68",
+          "title": "[1:28:47] The Others Feat. Lonette Charles - One Man Show (Ulterior Motive Remix) [Dub Police]"
+        },
+        {
+          "id": "DDkcHSWeYWw",
+          "title": "[1:30:47] Ulterior Motive - Gang Rule [Subtitles]"
+        },
+        {
+          "id": "k6aN9htFuok",
+          "title": "[1:35:08] Jubei - Rufige 11 [Metalheadz]"
+        },
+        {
+          "id": "vZ-5It6v7Hg",
+          "title": "[1:39:18] SpectraSoul - Organiser [Critical]"
+        },
+        {
+          "id": "BX8_uMbIxbM",
+          "title": "[?:??:??] + Commix & Icicle - Ultra Clean [Shogun Audio]"
+        },
+        {
+          "id": "71g9y7dbEdI",
+          "title": "[1:42:54] Ulterior Motive - Lost Contact [Metalheadz]"
+        },
+        {
+          "id": "va6P8Va9Njc",
+          "title": "[1:48:57] Kemal - Bleed [Negative]"
+        },
+        {
+          "id": "J0VFdgDIBC0",
+          "title": "[1:52:13] Ulterior Motive & Judda - Timekeeper [Subtitles]"
+        },
+        {
+          "id": "pptgPlFWdVI",
+          "title": "[1:54:37] Manix - Alright Wid Me [Reinforced]"
+        }
+      ],
+      "tags": [
+        {
+          "key": "Category:Ulterior Motive",
+          "url": "https://www.mixesdb.com/w/Category:Ulterior_Motive"
+        },
+        {
+          "key": "Category:LX One",
+          "url": "https://www.mixesdb.com/w/Category:LX_One"
+        },
+        {
+          "key": "Category:Metalheadz (Radio Show)",
+          "url": "https://www.mixesdb.com/w/Category:Metalheadz_(Radio_Show)"
+        },
+        {
+          "key": "Category:Drum & Bass",
+          "url": "https://www.mixesdb.com/w/Category:Drum_%26_Bass"
+        }
+      ],
+      "genres": [
+        "Ulterior Motive",
+        "LX One",
+        "Metalheadz (Radio Show)",
+        "Drum & Bass"
+      ]
+    },
+    {
+      "id": "mix4527",
+      "title": "2019-03-08 - TMSV - CBR Podcast 04",
+      "url": "https://www.mixesdb.com/w/2019-03-08_-_TMSV_-_CBR_Podcast_04",
+      "audio_source": "soundcloud",
+      "audio_url": "https://soundcloud.com/cosmic-bridge/cbr-podcast-04-tmsv",
+      "num_identified_tracks": 48,
+      "num_total_tracks": 55,
+      "num_available_transitions": 42,
+      "num_timestamps": 0,
+      "tracklist": [
+        {
+          "id": "61Ft4AZV1hk",
+          "title": "Twinkle Brothers - World Dominion"
+        },
+        {
+          "id": "fCha27G3WnU",
+          "title": "Bob Marley & The Wailers - Rat Race"
+        },
+        {
+          "id": "tEJ6JVBUBmk",
+          "title": "Billy Boyo - One Spliff A Day"
+        },
+        {
+          "id": "zPmoqM8LpVU",
+          "title": "Richie Spice - Marijuana"
+        },
+        {
+          "id": "aMV8XlY7WzQ",
+          "title": "Coki - Burnin'"
+        },
+        {
+          "id": "DIXTcLYmSwg",
+          "title": "Kahn - Dread (Gorgon Sound Version)"
+        },
+        {
+          "id": "C-d0eltpTbM",
+          "title": "Commodo, Kahn, Gantz - AMK"
+        },
+        {
+          "id": "a2abDPo9jzA",
+          "title": "Peverelist - Roll With The Punches"
+        },
+        {
+          "id": null,
+          "title": "Mala / Digital Mystikz - Blue Notez"
+        },
+        {
+          "id": null,
+          "title": "Mala / Digital Mystikz - I Wait"
+        },
+        {
+          "id": "1-rEAe4C8gk",
+          "title": "Kode 9 - 9 Samurai"
+        },
+        {
+          "id": null,
+          "title": "Kromestar - Shake It"
+        },
+        {
+          "id": null,
+          "title": "Loefah - Disko Rekah (TMSV 160 Edit)"
+        },
+        {
+          "id": "sJcGnXRI-P4",
+          "title": "Danny Scrilla - Riddim"
+        },
+        {
+          "id": "KAwyWkksXuo",
+          "title": "Hudson Mohawke - Cbat"
+        },
+        {
+          "id": null,
+          "title": "Kromestar - Distant Father"
+        },
+        {
+          "id": "vbVQbVD3vNw",
+          "title": "Kromestar - 2012"
+        },
+        {
+          "id": "tW6QFnJ7pYk",
+          "title": "Danny Scrilla - Thorium"
+        },
+        {
+          "id": "9go_60XhdxE",
+          "title": "Om Unit & Kromestar - Lightworker's Call"
+        },
+        {
+          "id": "YNQhGXYqJeA",
+          "title": "Kromestar - The Progress"
+        },
+        {
+          "id": "HGE4trsZYwQ",
+          "title": "Danny Scrilla - VV Cephei"
+        },
+        {
+          "id": "poC9aSlek7A",
+          "title": "Kid Drama - Auto State Of Mind"
+        },
+        {
+          "id": "KosR8G8TXS4",
+          "title": "Boymerang - Soul Beat Runna"
+        },
+        {
+          "id": "hzIFjGcOKbg",
+          "title": "Konflict - Beckoning"
+        },
+        {
+          "id": "_Z48K1svJWo",
+          "title": "Dillinja - Acid Roller"
+        },
+        {
+          "id": "8UAUDbWrVhA",
+          "title": "Konflict - Messiah"
+        },
+        {
+          "id": "VB2vKK_8OPc",
+          "title": "Dom & Roland - Can't Punish Me"
+        },
+        {
+          "id": "UiD0-9OpFX4",
+          "title": "Teebee - Gravity Distortion"
+        },
+        {
+          "id": "5OVvJOeUdUs",
+          "title": "Burial - Forgive"
+        },
+        {
+          "id": null,
+          "title": "Danny Scrilla - Push-Pull"
+        },
+        {
+          "id": "F8zxb6a6pps",
+          "title": "Stimming - November Morning (Brandenburgisches Staatsorchester Version)"
+        },
+        {
+          "id": "7mpnOvh2m-g",
+          "title": "Stimming - November Morning"
+        },
+        {
+          "id": "sCzJQRVbWtE",
+          "title": "Burial & Four Tet - Moth"
+        },
+        {
+          "id": "rRuH4xmok_E",
+          "title": "Kahn & Neek - Backchat"
+        },
+        {
+          "id": "-5fASE2eZt4",
+          "title": "Karmon - Wowshit"
+        },
+        {
+          "id": "peu8AUqwFew",
+          "title": "Julio Bashmore - Au Seve"
+        },
+        {
+          "id": "5NOdXLasSJA",
+          "title": "Joy Orbison & Boddika - Mercy [Boddika VIP]"
+        },
+        {
+          "id": "A1uIRm-KPd4",
+          "title": "Makossa & Megablast Feat. Cleydys Villalon - Soy Como Soy"
+        },
+        {
+          "id": "gnaggng6Yn8",
+          "title": "Kingdom - Fogs"
+        },
+        {
+          "id": "vQpAR7ZmT7A",
+          "title": "Martyn - Miniluv"
+        },
+        {
+          "id": null,
+          "title": "R.I.P. Productions - The Rub"
+        },
+        {
+          "id": "3ZiAL0w1R5g",
+          "title": "El-B Feat. Juice Man - Buck N Bury"
+        },
+        {
+          "id": "_vkZq7YcGy0",
+          "title": "Roska Feat. Sweetie Irie - Badman"
+        },
+        {
+          "id": "-D7K06rnn1o",
+          "title": "Horsepower Productions - Fat Larry's Skank"
+        },
+        {
+          "id": "GOwYJ6A9C3A",
+          "title": "Sully Feat. Jamakabi - Bullseye"
+        },
+        {
+          "id": "ZzYl88CG_-0",
+          "title": "Roska - 480 BC"
+        },
+        {
+          "id": "2En93fR_09w",
+          "title": "Pangaea - Router"
+        },
+        {
+          "id": "oBgqG7nfHjg",
+          "title": "Guido - Orchestral Lab"
+        },
+        {
+          "id": "ytItRVnGojQ",
+          "title": "Guido - Mad Sax"
+        },
+        {
+          "id": "fhKHbNUG4Ww",
+          "title": "Distance & Cyrus - Titan"
+        },
+        {
+          "id": "-BFeY5aC06k",
+          "title": "Coki - Spongebob"
+        },
+        {
+          "id": "1OE_jjJkkD8",
+          "title": "Rusko - Jahova"
+        },
+        {
+          "id": "e5RFc76jU7w",
+          "title": "Digital Mystikz - Thief In Da Night"
+        },
+        {
+          "id": "DOw62EREnCg",
+          "title": "Burial - In McDonald's"
+        },
+        {
+          "id": "TXSgwPQsQng",
+          "title": "Opeth - For Absent Friends"
+        }
+      ],
+      "tags": [
+        {
+          "key": "Category:TMSV",
+          "url": "https://www.mixesdb.com/w/Category:TMSV"
+        },
+        {
+          "key": "Category:CBR Podcast",
+          "url": "https://www.mixesdb.com/w/Category:CBR_Podcast"
+        },
+        {
+          "key": "Category:Dubstep",
+          "url": "https://www.mixesdb.com/w/Category:Dubstep"
+        },
+        {
+          "key": "Category:Drum & Bass",
+          "url": "https://www.mixesdb.com/w/Category:Drum_%26_Bass"
+        }
+      ],
+      "genres": [
+        "TMSV",
+        "CBR Podcast",
+        "Dubstep",
+        "Drum & Bass"
+      ]
+    }
+  ],
+  "num_tracks": 104
+}

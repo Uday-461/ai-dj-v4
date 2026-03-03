@@ -1,0 +1,80 @@
+{
+  "num_mixes": 1,
+  "mixes": [
+    {
+      "id": "mix0502",
+      "title": "2012-03-16 - Jimpster - Freerange Records Podcast (March 2012)",
+      "url": "https://www.mixesdb.com/w/2012-03-16_-_Jimpster_-_Freerange_Records_Podcast_(March_2012)",
+      "audio_source": "soundcloud",
+      "audio_url": "http://soundcloud.com/jimpster/freerange-podcast-march-2012",
+      "num_identified_tracks": 10,
+      "num_total_tracks": 12,
+      "num_available_transitions": 8,
+      "num_timestamps": 0,
+      "tracklist": [
+        {
+          "id": "IESJRTMV9fA",
+          "title": "Chymera - Fathoms - Connaisieur [Kim Mare Ra]"
+        },
+        {
+          "id": "SzbuVn-JkKc",
+          "title": "Midland - Tape Burn [Aus]"
+        },
+        {
+          "id": "0MtWQYY3dmU",
+          "title": "Stubbs - The Mentalist [Baalsaal]"
+        },
+        {
+          "id": "8N7FMEgynPs",
+          "title": "Willie Graff & Tuccillo [Lunar Feelings - Freerange]"
+        },
+        {
+          "id": null,
+          "title": "Mr Beatnik - Shifting Sands [Don't Be Afraid]"
+        },
+        {
+          "id": "KrAHZbmsgPU",
+          "title": "Session Victim - Cow Palace [Delusions Of Grandeur]"
+        },
+        {
+          "id": "hOGJFPkyD7w",
+          "title": "Liquideep - Feel It (Andre Lodemann Remix) [Deeper Shades]"
+        },
+        {
+          "id": "geMq4qjQe0Y",
+          "title": "Cesar Ramirez - Exploration [Smooth Agent]"
+        },
+        {
+          "id": "2eRD3H5AY0s",
+          "title": "RTX - Innervoyage [Deeply Rooted House]"
+        },
+        {
+          "id": "xlf42cX__dM",
+          "title": "Joash - Don't Fear It Fight It (Arto Mwambe Remix) [Compost Black Label]"
+        },
+        {
+          "id": "tu9QylBnSrQ",
+          "title": "Yuna - Live Your Life (King Britt Dream Mix) [Fader]"
+        },
+        {
+          "id": null,
+          "title": "Manuel Tur - Maybe Next Lifetime (Blakkat Vs. MT Half Life Version) [Freerange]"
+        }
+      ],
+      "tags": [
+        {
+          "key": "Category:Jimpster",
+          "url": "https://www.mixesdb.com/w/Category:Jimpster"
+        },
+        {
+          "key": "Category:Freerange Records Podcast",
+          "url": "https://www.mixesdb.com/w/Category:Freerange_Records_Podcast"
+        },
+        {
+          "key": "Category:House",
+          "url": "https://www.mixesdb.com/w/Category:House"
+        }
+      ]
+    }
+  ]
+}
