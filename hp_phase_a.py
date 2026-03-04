@@ -31,6 +31,14 @@ log = logging.getLogger(__name__)
 
 SCRIPTS_DIR = Path(__file__).parent / "scripts"
 PROGRESS_FILE = "phase_a_progress.json"
+MAX_RETRIES = 3
+
+STEP_TIMEOUTS = {
+    "02_download_audio.py": 3600,   # 1 hour
+    "03_detect_beats.py": 1800,     # 30 min
+    "04_align_tracks.py": 1800,     # 30 min
+    "05_extract_transitions.py": 600, # 10 min
+}
 
 
 def load_progress(path):
@@ -56,13 +64,30 @@ def save_progress(progress, path):
         json.dump(progress, f, indent=2)
 
 
-def run_script(script_name, args_list):
-    cmd = [sys.executable, str(SCRIPTS_DIR / script_name)] + args_list
-    log.info(f"Running: {script_name}")
-    result = subprocess.run(cmd, capture_output=True, text=True)
+def run_script(script_name, args_list, timeout=1800):
+    """Run a pipeline script as subprocess with timeout.
+
+    Default timeout: 30 minutes. Override via STEP_TIMEOUTS dict.
+    Uses -u for unbuffered output and merges stderr into stdout.
+    """
+    cmd = [sys.executable, "-u", str(SCRIPTS_DIR / script_name)] + args_list
+    log.info(f"Running: {' '.join(cmd)}")
+    try:
+        result = subprocess.run(
+            cmd, timeout=timeout,
+            stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True,
+        )
+    except subprocess.TimeoutExpired as e:
+        output = e.stdout or "" if hasattr(e, "stdout") else ""
+        if output:
+            log.error(f"TIMEOUT after {timeout}s. Last output:\n{output[-2000:]}")
+        else:
+            log.error(f"TIMEOUT after {timeout}s (no captured output)")
+        raise RuntimeError(f"{script_name} timed out after {timeout}s")
+    if result.stdout:
+        for line in result.stdout.strip().splitlines():
+            log.info(f"  [{script_name}] {line}")
     if result.returncode != 0:
-        log.error(f"STDOUT: {result.stdout[-500:]}" if result.stdout else "")
-        log.error(f"STDERR: {result.stderr[-500:]}" if result.stderr else "")
         raise RuntimeError(f"{script_name} failed with code {result.returncode}")
     return result.stdout
 
@@ -185,7 +210,10 @@ def cleanup_mix_files(mix, data_root, all_mixes, completed_mixes):
 
 def process_mix(mix, data_root, tmp_manifest, all_mixes, hf_repo, hf_token,
                 progress, progress_path):
-    """Process one mix: download → beats → align → transitions → upload → cleanup."""
+    """Process one mix: download → beats → align → transitions → upload → cleanup.
+
+    Each step is retried up to MAX_RETRIES times with backoff.
+    """
     mix_id = mix["id"]
     start = time.time()
 
@@ -201,11 +229,23 @@ def process_mix(mix, data_root, tmp_manifest, all_mixes, hf_repo, hf_token,
     ]
 
     for script, extra_args in steps:
-        try:
-            run_script(script, common_args + extra_args)
-        except RuntimeError as e:
-            log.error(f"{script} failed for {mix_id}: {e}")
-            progress["failed"][mix_id] = f"{script}: {e}"
+        step_timeout = STEP_TIMEOUTS.get(script, 1800)
+        last_err = None
+        for attempt in range(1, MAX_RETRIES + 1):
+            try:
+                run_script(script, common_args + extra_args, timeout=step_timeout)
+                break  # success
+            except RuntimeError as e:
+                last_err = e
+                if attempt < MAX_RETRIES:
+                    wait = 30 * attempt  # 30s, 60s backoff
+                    log.warning(f"{script} attempt {attempt}/{MAX_RETRIES} failed: {e}")
+                    log.warning(f"Retrying in {wait}s...")
+                    time.sleep(wait)
+        else:
+            # All retries exhausted
+            log.error(f"{script} failed after {MAX_RETRIES} attempts for {mix_id}: {last_err}")
+            progress["failed"][mix_id] = f"{script}: {last_err}"
             save_progress(progress, progress_path)
             return False
 
@@ -220,15 +260,23 @@ def process_mix(mix, data_root, tmp_manifest, all_mixes, hf_repo, hf_token,
     n_tracks = len([1 for tid in get_track_ids(mix)
                     if (data_root / "tracks" / f"{tid}.mp3").exists()])
 
-    # Upload to HF
+    # Upload to HF (with retry)
     if hf_token:
-        try:
-            upload_mix_to_hf(mix, data_root, hf_repo, hf_token)
-        except Exception as e:
-            log.error(f"Upload failed for {mix_id}: {e}")
-            progress["failed"][mix_id] = f"upload: {e}"
-            save_progress(progress, progress_path)
-            return False
+        for attempt in range(1, MAX_RETRIES + 1):
+            try:
+                upload_mix_to_hf(mix, data_root, hf_repo, hf_token)
+                break
+            except Exception as e:
+                if attempt < MAX_RETRIES:
+                    wait = 60 * attempt
+                    log.warning(f"Upload attempt {attempt}/{MAX_RETRIES} failed: {e}")
+                    log.warning(f"Retrying in {wait}s...")
+                    time.sleep(wait)
+                else:
+                    log.error(f"Upload failed after {MAX_RETRIES} attempts for {mix_id}: {e}")
+                    progress["failed"][mix_id] = f"upload: {e}"
+                    save_progress(progress, progress_path)
+                    return False
 
     # Cleanup local files
     cleanup_mix_files(mix, data_root, all_mixes, progress["completed_mixes"])
@@ -300,6 +348,7 @@ def main():
              f"{len(pending)} pending")
 
     tmp_manifest = data_root / "_tmp_phase_a_manifest.json"
+    run_start = time.time()
 
     for i, mix in enumerate(pending):
         log.info(f"\n{'='*60}")
@@ -309,6 +358,19 @@ def main():
 
         process_mix(mix, data_root, tmp_manifest, all_mixes,
                     args.hf_repo, hf_token, progress, progress_path)
+
+        # Progress summary
+        done = progress["stats"]["mixes_done"]
+        failed = len(progress["failed"])
+        total = len(all_mixes)
+        elapsed_h = (time.time() - run_start) / 3600
+        completed_this_run = i + 1
+        if completed_this_run > 0:
+            eta_h = elapsed_h / completed_this_run * (len(pending) - completed_this_run)
+        else:
+            eta_h = 0
+        log.info(f"PROGRESS: {done}/{total} mixes done, {failed} failed, "
+                 f"{elapsed_h:.1f}h elapsed, ~{eta_h:.1f}h remaining")
 
     if tmp_manifest.exists():
         tmp_manifest.unlink()
