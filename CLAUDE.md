@@ -36,6 +36,7 @@ v4/
     model/                   # StemTransitionNet architecture + training
   scripts/
     01_select_subset.py      # select mixes from dataset JSON
+    split_manifest.py        # split manifest into N parts for parallel processing
     02_download_audio.py     # Apify primary + yt-dlp fallback
     03_detect_beats.py       # beat detection
     04_align_tracks.py       # DTW alignment
@@ -57,7 +58,10 @@ v4/
     djmix-dataset.json       # full dataset (5,040 mixes)
     manifest_1mix.json       # 1 mix (dev)
     manifest_2mix.json       # 2 mixes (dev)
-    manifest_50mix.json      # 50 mixes (production)
+    manifest_50mix.json      # 50 mixes (original small run)
+    manifest_100mix.json     # 100 mixes (production)
+    manifest_100mix_part1.json # 50 mixes for hp-mint (odd indices)
+    manifest_100mix_part2.json # 50 mixes for ops thinkpad (even indices)
 ```
 
 ## Pipeline Overview (Split Architecture)
@@ -91,6 +95,12 @@ python3 hp_phase_a.py --manifest data/manifest.json --no-apify
 
 # Run a subset manifest (e.g. retries + N new mixes)
 python3 hp_phase_a.py --manifest data/manifest_retry10.json
+
+# Parallel Phase A on two machines (100 mixes, 50 each):
+# hp-mint:
+nohup python3 hp_phase_a.py --manifest data/manifest_100mix_part1.json --no-apify > ~/phase_a.log 2>&1 &
+# ops thinkpad:
+nohup python3 hp_phase_a.py --manifest data/manifest_100mix_part2.json --no-apify > ~/phase_a.log 2>&1 &
 ```
 
 Features:
@@ -118,9 +128,12 @@ sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.ta
 ```
 
 **Manifests:**
-- `data/manifest_2mix.json` -- 2 mixes (dev)
 - `data/manifest_1mix.json` -- 1 house mix (Jimpster, mix0502)
-- `data/manifest_50mix.json` -- 50 house mixes, 1321 tracks, 1055 transitions
+- `data/manifest_2mix.json` -- 2 mixes (dev)
+- `data/manifest_50mix.json` -- 50 mixes (original small run)
+- `data/manifest_100mix.json` -- 100 mixes, 3928 tracks, 2931 transitions (production)
+- `data/manifest_100mix_part1.json` -- 50 mixes for hp-mint (round-robin odd)
+- `data/manifest_100mix_part2.json` -- 50 mixes for ops thinkpad (round-robin even)
 
 **Monitoring:**
 ```bash

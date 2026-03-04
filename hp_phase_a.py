@@ -192,8 +192,9 @@ def process_mix(mix, data_root, tmp_manifest, all_mixes, hf_repo, hf_token,
     create_single_mix_manifest(mix, tmp_manifest)
     common_args = ["--manifest", str(tmp_manifest), "--data-root", str(data_root)]
 
+    no_apify = os.environ.get("AIDJ_NO_APIFY") == "1"
     steps = [
-        ("02_download_audio.py", []),
+        ("02_download_audio.py", ["--no-apify"] if no_apify else []),
         ("03_detect_beats.py", ["--skip-mix-audio"]),
         ("04_align_tracks.py", []),
         ("05_extract_transitions.py", []),
@@ -271,6 +272,10 @@ def main():
     hf_token = os.environ.get("HF_TOKEN", "")
     if not hf_token:
         log.warning("HF_TOKEN not set — will process but not upload")
+
+    # Set NO_APIFY env var so child scripts (02_download_audio.py) see it
+    if args.no_apify:
+        os.environ["AIDJ_NO_APIFY"] = "1"
 
     with open(args.manifest) as f:
         manifest = json.load(f)
