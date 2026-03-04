@@ -49,8 +49,10 @@ v4/
     10_evaluate.py           # evaluation metrics
     11_generate_mix.py       # end-to-end inference
   hp_phase_a.py              # Phase A: download/beats/align/transitions + upload (hp-mint)
-  hp_phase_b.py              # Phase B: stem curve extraction (hp-mint)
-  kaggle_phase_b.ipynb       # Phase B: Demucs separation + residuals (Kaggle P100)
+  hp_phase_b.py              # Phase B: stem curve extraction (hp-mint, legacy fallback)
+  kaggle_phase_b.ipynb       # Phase B: Demucs + residuals, single notebook (legacy fallback)
+  kaggle_phaseB_step6.ipynb  # Phase B Step 6: Demucs + residuals (Kaggle GPU, parallel-safe)
+  kaggle_phaseB_step7.ipynb  # Phase B Step 7: CVXPY curves (Kaggle CPU, parallel-safe)
   kaggle_phase_c.ipynb       # Phase C: training + evaluation (Kaggle P100)
   upload_to_hf.py            # bulk upload to HF Hub
   setup_hp_mint.sh           # one-time hp-mint environment setup
@@ -71,8 +73,8 @@ The pipeline is split across different machines:
 | Phase | Scripts | Where | Description |
 |-------|---------|-------|-------------|
 | **A. Data prep** | 02-05 | hp-mint | Download, beats, align, transitions -> upload to HF |
-| **B. Stems** | 06, 06b | Kaggle P100 | Demucs separation, residuals (`kaggle_phase_b.ipynb`) |
-| **B. Curves** | 07 | hp-mint | CVXPY curve extraction (`hp_phase_b.py`) |
+| **B. Stems** | 06, 06b, 06c | Kaggle P100 | Demucs separation, residuals (`kaggle_phaseB_step6.ipynb` x2) |
+| **B. Curves** | 07 | Kaggle CPU | CVXPY curve extraction (`kaggle_phaseB_step7.ipynb` x2) |
 | **C. Train** | 08-10 | Kaggle P100 | Build dataset, train StemTransitionNet, evaluate (`kaggle_phase_c.ipynb`) |
 | D. Infer | 11 | any | Generate transition for new track pair |
 
@@ -143,19 +145,32 @@ grep -E '(Uploaded|Upload failed|ERROR|INFO \[)' ~/phase_a.log | tail -20
 python3 -c "import json; p=json.load(open('djmix/phase_a_progress.json')); print('Done:', len(p['completed_mixes'])); print('Failed:', list(p['failed'].keys())); print('Stats:', p['stats'])"
 ```
 
-### Phase B: Stems (Kaggle P100) + Curves (hp-mint)
+### Phase B: 2 Parallel Kaggle Notebooks
 
-**Kaggle notebook (`kaggle_phase_b.ipynb`):**
-- Clones repo, installs deps, downloads from HF
-- Runs Demucs stem separation (06) + residual computation (06b)
-- Uploads stems back to HF Hub
+**Step 6 (GPU):** `kaggle_phaseB_step6.ipynb`
+- Upload to Kaggle, set Accelerator = GPU P100
+- Edit MANIFEST in Cell 2: `"manifest_100mix_part1"` or `"manifest_100mix_part2"`
+- Run cells 1-5. Resumable across 12h sessions.
+- Run 2 notebooks in parallel (one per manifest part)
+- Each writes its own progress file (`phase_b_progress_step6_part1.json` / `part2`)
 
-**hp-mint (`hp_phase_b.py`):**
-- Downloads stems from HF, runs CVXPY curve extraction (07)
-- Parallel stem downloads, 90s worker timeout, per-file upload
-- Skips bogus cue times (>3600s)
+**Step 7 (CPU):** `kaggle_phaseB_step7.ipynb`
+- Upload to Kaggle, set Accelerator = None (CPU)
+- Edit MANIFEST in Cell 2: same as above
+- Run after Step 6 completes for your manifest part
+- Run 2 notebooks in parallel
+- Each writes its own progress file (`phase_b_progress_step7_part1.json` / `part2`)
+
+**DRY_RUN:** Both notebooks have `DRY_RUN = False` in Cell 2. Set `True` to process only 1 mix (quick error check before full run).
+
+**Progress isolation:** Each notebook writes only its own part-scoped progress file. To check global completion, each notebook merges all progress files from HF. No race conditions — each file has exactly one writer.
+
+**Legacy fallbacks (kept, not deleted):**
+- `kaggle_phase_b.ipynb` — original single-notebook approach
+- `hp_phase_b.py` — curve extraction on hp-mint CPU
 
 ```bash
+# Legacy: run curves on hp-mint instead of Kaggle
 nohup python3 hp_phase_b.py --manifest data/manifest_50mix.json > ~/phase_b.log 2>&1 &
 ```
 
