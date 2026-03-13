@@ -1,9 +1,11 @@
 {
   "metadata": {
     "part": 1,
-    "num_mixes": 50,
-    "num_transitions": 1473,
-    "num_residuals": 1473
+    "num_mixes": 33,
+    "num_transitions": 839,
+    "num_residuals": 839,
+    "total_transitions": 839,
+    "total_residuals": 839
   },
   "mixes": [
     {
@@ -31,83 +33,27 @@
       "notes": ""
     },
     {
-      "id": "mix3619",
-      "usable_transitions": 38,
-      "num_residuals": 38,
-      "has_complete_stems": true,
-      "title": "2017-03-05 - Ben Sims - Run It Red 028, NTS Radio",
-      "notes": ""
-    },
-    {
-      "id": "mix4519",
-      "usable_transitions": 37,
-      "num_residuals": 37,
-      "has_complete_stems": true,
-      "title": "2019-03-02 - DJ Stingray - Essential Mix",
-      "notes": ""
-    },
-    {
-      "id": "mix4416",
+      "id": "mix2357",
       "usable_transitions": 36,
       "num_residuals": 36,
       "has_complete_stems": true,
-      "title": "2018-12-07 - Ti\u00ebsto - Club Life 610 (Best Of Musical Freedom And AFTR:HRS)",
+      "title": "2015-06-17 - Jubei & SP:MC - Metalheadz, Rinse FM",
       "notes": ""
     },
     {
-      "id": "mix2921",
-      "usable_transitions": 34,
-      "num_residuals": 34,
+      "id": "mix4454",
+      "usable_transitions": 32,
+      "num_residuals": 32,
       "has_complete_stems": true,
-      "title": "2016-03-29 - Para One - Spring Mixtape (Rinse FM France)",
+      "title": "2019-01-05 - Silent Dust - none60 Podcast 034 (2018 Review Mix)",
       "notes": ""
     },
     {
-      "id": "mix1077",
-      "usable_transitions": 33,
-      "num_residuals": 33,
-      "has_complete_stems": true,
-      "title": "2013-07-28 - Dave Clarke @ Tomorrowland",
-      "notes": ""
-    },
-    {
-      "id": "mix5032",
-      "usable_transitions": 33,
-      "num_residuals": 33,
-      "has_complete_stems": true,
-      "title": "2020-12-12 - Jim Bean @ HK-Bunker, Berlin",
-      "notes": ""
-    },
-    {
-      "id": "mix0969",
+      "id": "mix3576",
       "usable_transitions": 31,
       "num_residuals": 31,
       "has_complete_stems": true,
-      "title": "2013-05-15 - Fracture, Artificial Intelligence - Metalheadz, Rinse FM",
-      "notes": ""
-    },
-    {
-      "id": "mix3005",
-      "usable_transitions": 31,
-      "num_residuals": 31,
-      "has_complete_stems": true,
-      "title": "2016-05-09 - Kangding Ray - Resident Advisor (RA.519)",
-      "notes": ""
-    },
-    {
-      "id": "mix3979",
-      "usable_transitions": 31,
-      "num_residuals": 31,
-      "has_complete_stems": true,
-      "title": "2017-08-20 - Ben Sims - Run It Red 033, NTS Radio",
-      "notes": ""
-    },
-    {
-      "id": "mix4792",
-      "usable_transitions": 31,
-      "num_residuals": 31,
-      "has_complete_stems": true,
-      "title": "2019-11-07 - Tommy Holohan - Slam Radio 371",
+      "title": "2017-02-14 - Para One - Rinse FM France (Valentine's Mixtape)",
       "notes": ""
     },
     {
@@ -119,14 +65,6 @@
       "notes": ""
     },
     {
-      "id": "mix1960",
-      "usable_transitions": 30,
-      "num_residuals": 30,
-      "has_complete_stems": true,
-      "title": "2014-11-28 - Tanith @ Suicide Techno Nacht, Suicide Circus, Berlin",
-      "notes": ""
-    },
-    {
       "id": "mix2865",
       "usable_transitions": 30,
       "num_residuals": 30,
@@ -135,35 +73,11 @@
       "notes": ""
     },
     {
-      "id": "mix3828",
-      "usable_transitions": 30,
-      "num_residuals": 30,
-      "has_complete_stems": true,
-      "title": "2017-06-01 - Hubajube - All Jets Uncooled (Promo Mix)",
-      "notes": ""
-    },
-    {
-      "id": "mix4316",
-      "usable_transitions": 30,
-      "num_residuals": 30,
-      "has_complete_stems": true,
-      "title": "2018-08-09 - Doc Scott - Future Beats Radio Show S02E02",
-      "notes": ""
-    },
-    {
-      "id": "mix0421",
+      "id": "mix0930",
       "usable_transitions": 29,
       "num_residuals": 29,
       "has_complete_stems": true,
-      "title": "2011-10-15 - SBTRKT - Essential Mix",
-      "notes": ""
-    },
-    {
-      "id": "mix1203",
-      "usable_transitions": 29,
-      "num_residuals": 29,
-      "has_complete_stems": true,
-      "title": "2013-10-26 - Dave Clarke @ 18 Years Kozzmozz, Art Cube, Galveston, Belgium",
+      "title": "2013-04-20 - John B @ Sch\u00fc\u00fcr, Luzern, Part 1 (John B Podcast 100)",
       "notes": ""
     },
     {
@@ -175,51 +89,27 @@
       "notes": ""
     },
     {
-      "id": "mix2441",
+      "id": "mix2862",
       "usable_transitions": 29,
       "num_residuals": 29,
       "has_complete_stems": true,
-      "title": "2015-08-12 - John B - John B Podcast 158 (Summer 2015 Studio Mix)",
+      "title": "2016-02-27 - R\u00f8dh\u00e5d - Essential Mix",
       "notes": ""
     },
     {
-      "id": "mix2993",
-      "usable_transitions": 29,
-      "num_residuals": 29,
-      "has_complete_stems": true,
-      "title": "2016-05-04 - Dave The Drummer - Beltane 2016 2 Hour Mix",
-      "notes": ""
-    },
-    {
-      "id": "mix4684",
-      "usable_transitions": 29,
-      "num_residuals": 29,
-      "has_complete_stems": true,
-      "title": "2019-08-03 - Surgeon @ Dekmantel Festival, Amsterdam",
-      "notes": ""
-    },
-    {
-      "id": "mix1775",
+      "id": "mix0191",
       "usable_transitions": 28,
       "num_residuals": 28,
       "has_complete_stems": true,
-      "title": "2014-09-07 - Grooverider @ Metalheadz History Session, Outlook Festival, Croatia",
+      "title": "2005-03-05 - Bailey B2B Randall @ Desire, The Scala, London (Xtra Bass Week)",
       "notes": ""
     },
     {
-      "id": "mix2614",
+      "id": "mix2740",
       "usable_transitions": 28,
       "num_residuals": 28,
       "has_complete_stems": true,
-      "title": "2015-11-18 - Artificial Intelligence, SCAR - Metalheadz, Rinse FM",
-      "notes": ""
-    },
-    {
-      "id": "mix4342",
-      "usable_transitions": 28,
-      "num_residuals": 28,
-      "has_complete_stems": true,
-      "title": "2018-09-06 - 747 - Slam Radio 310",
+      "title": "2016-01-07 - Markus Schulz - Global DJ Broadcast (Classics Showcase)",
       "notes": ""
     },
     {
@@ -231,35 +121,11 @@
       "notes": ""
     },
     {
-      "id": "mix0815",
-      "usable_transitions": 27,
-      "num_residuals": 27,
-      "has_complete_stems": true,
-      "title": "2013-02-09 - Luke Vibert @ Chinese New Year, Vinyl Pimp, London (Discogs Mix 001)",
-      "notes": ""
-    },
-    {
       "id": "mix1868",
       "usable_transitions": 27,
       "num_residuals": 27,
       "has_complete_stems": true,
       "title": "2014-10-18 - Michael Mayer @ DGTL pres. Kompakt, ADE",
-      "notes": ""
-    },
-    {
-      "id": "mix2088",
-      "usable_transitions": 27,
-      "num_residuals": 27,
-      "has_complete_stems": true,
-      "title": "2015-01-28 - Oxia - Cadenza Podcast 153",
-      "notes": ""
-    },
-    {
-      "id": "mix2526",
-      "usable_transitions": 27,
-      "num_residuals": 27,
-      "has_complete_stems": true,
-      "title": "2015-10-01 - Doc Scott - Future Beats Radio Show",
       "notes": ""
     },
     {
@@ -271,14 +137,6 @@
       "notes": ""
     },
     {
-      "id": "mix3476",
-      "usable_transitions": 27,
-      "num_residuals": 27,
-      "has_complete_stems": true,
-      "title": "2016-12-27 - Juho Kusti - Deep Space Helsinki (Juho Kusti's Faves Of The Year)",
-      "notes": ""
-    },
-    {
       "id": "mix4124",
       "usable_transitions": 27,
       "num_residuals": 27,
@@ -287,99 +145,59 @@
       "notes": ""
     },
     {
-      "id": "mix4266",
+      "id": "mix4790",
       "usable_transitions": 27,
       "num_residuals": 27,
       "has_complete_stems": true,
-      "title": "2018-06-09 - Carl Cox b2b Adam Beyer @ Junction 2, London",
+      "title": "2019-11-05 - Tasha @ Keep Hush Live: 1985 Takeover 2",
       "notes": ""
     },
     {
-      "id": "mix4869",
-      "usable_transitions": 27,
-      "num_residuals": 27,
-      "has_complete_stems": true,
-      "title": "2020-02-08 - Carista - Essential Mix",
-      "notes": ""
-    },
-    {
-      "id": "mix1009",
+      "id": "mix0206",
       "usable_transitions": 26,
       "num_residuals": 26,
       "has_complete_stems": true,
-      "title": "2013-06-15 - Skrillex - Essential Mix",
+      "title": "2005-10-07 - Chase & Status @ Renegade Hardware, The End, London",
       "notes": ""
     },
     {
-      "id": "mix1166",
+      "id": "mix1076",
       "usable_transitions": 26,
       "num_residuals": 26,
       "has_complete_stems": true,
-      "title": "2013-10-03 - Doc Scott, Overlook - Future Beats Radio Show",
+      "title": "2013-07-28 - Arts Learning Community - Away (isolatedmix 40)",
       "notes": ""
     },
     {
-      "id": "mix1845",
+      "id": "mix1832",
       "usable_transitions": 26,
       "num_residuals": 26,
       "has_complete_stems": true,
-      "title": "2014-10-09 - Armin van Buuren - A State Of Trance 684",
+      "title": "2014-10-02 - Doc Scott - Future Beats Radio Show",
       "notes": ""
     },
     {
-      "id": "mix1940",
+      "id": "mix2353",
       "usable_transitions": 26,
       "num_residuals": 26,
       "has_complete_stems": true,
-      "title": "2014-11-19 - Jubei vs dBridge & Skeptical & SP:MC - Metalheadz vs Exit Records, Rinse FM",
+      "title": "2015-06-14 - DJ Shiva, Paula Temple (Movement Festival, 2015) - SUBterror Radio 121",
       "notes": ""
     },
     {
-      "id": "mix2432",
+      "id": "mix2729",
       "usable_transitions": 26,
       "num_residuals": 26,
       "has_complete_stems": true,
-      "title": "2015-08-07 - Marquis Hawkes, Tilman - Solid Steel",
+      "title": "2016-01-02 - Dr. Motte @ Back To Basics, Praegewerk, Berlin",
       "notes": ""
     },
     {
-      "id": "mix2636",
+      "id": "mix4201",
       "usable_transitions": 26,
       "num_residuals": 26,
       "has_complete_stems": true,
-      "title": "2015-11-27 - Counterstrike @ Wormhole, Cross Club, Prague",
-      "notes": ""
-    },
-    {
-      "id": "mix2855",
-      "usable_transitions": 26,
-      "num_residuals": 26,
-      "has_complete_stems": true,
-      "title": "2016-02-24 - Dan Drastic, Jey Kurmis - Moon Harbour Radio 70",
-      "notes": ""
-    },
-    {
-      "id": "mix3071",
-      "usable_transitions": 26,
-      "num_residuals": 26,
-      "has_complete_stems": true,
-      "title": "2016-06-10 - Arnaud Le Texier - Children Of Tomorrow Podcast 29",
-      "notes": ""
-    },
-    {
-      "id": "mix4072",
-      "usable_transitions": 26,
-      "num_residuals": 26,
-      "has_complete_stems": true,
-      "title": "2017-11-16 - One.Seventy - Balamii Radio",
-      "notes": ""
-    },
-    {
-      "id": "mix0035",
-      "usable_transitions": 25,
-      "num_residuals": 25,
-      "has_complete_stems": true,
-      "title": "1997 - Presha @ The Breaks, Auckland",
+      "title": "2018-03-31 - Peyo @ French Plates Tour, L'Antirouille, Montpellier",
       "notes": ""
     },
     {
@@ -399,12 +217,60 @@
       "notes": ""
     },
     {
-      "id": "mix2391",
-      "usable_transitions": 25,
-      "num_residuals": 25,
-      "has_complete_stems": true,
-      "title": "2015-07-12 - Objekt @ Freerotation, Baskerville Hall, Wales",
-      "notes": ""
+      "id": "mix0010",
+      "usable_transitions": 10,
+      "num_residuals": 10,
+      "has_complete_stems": false,
+      "title": "",
+      "notes": "no reference data"
+    },
+    {
+      "id": "mix0502",
+      "usable_transitions": 10,
+      "num_residuals": 10,
+      "has_complete_stems": false,
+      "title": "",
+      "notes": "no reference data"
+    },
+    {
+      "id": "mix1234",
+      "usable_transitions": 10,
+      "num_residuals": 10,
+      "has_complete_stems": false,
+      "title": "",
+      "notes": "no reference data"
+    },
+    {
+      "id": "mix2589",
+      "usable_transitions": 10,
+      "num_residuals": 10,
+      "has_complete_stems": false,
+      "title": "",
+      "notes": "no reference data"
+    },
+    {
+      "id": "mix3082",
+      "usable_transitions": 10,
+      "num_residuals": 10,
+      "has_complete_stems": false,
+      "title": "",
+      "notes": "no reference data"
+    },
+    {
+      "id": "mix3844",
+      "usable_transitions": 10,
+      "num_residuals": 10,
+      "has_complete_stems": false,
+      "title": "",
+      "notes": "no reference data"
+    },
+    {
+      "id": "mix4511",
+      "usable_transitions": 10,
+      "num_residuals": 10,
+      "has_complete_stems": false,
+      "title": "",
+      "notes": "no reference data"
     }
   ]
 }
